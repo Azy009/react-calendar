@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.react-calendar__month-view__weekdays > div > abbr{
+  text-decoration: none !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.react-calendar__tile--active {
+  background: #13bd57 !important;
+  color: white;
+}
+
+.react-calendar__navigation{
+background-color: #13bd57;
+}
+
+.react-calendar__navigation__label__labelText {
+  color: white !important;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  color: white;
+  background: none;
+}
+
+
+.react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus {
+  background-color: #0f9d48 !important;
 }

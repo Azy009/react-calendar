@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import 'react-calendar/dist/Calendar.css';
+import { useState } from 'react';
+import Calendar from 'react-calendar';
+const App = () => {
+  const [seldate,setseldate] = useState(new Date);
+  console.log("seleted date",seldate);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    
+    <div style={{fontSize:'40px',textAlign:'center',marginTop:'80px',fontWeight:'550',color:'#13bd57'}}>
+      Calendar in React.js
     </div>
-  );
+
+    <div style={{display:'flex',justifyContent:'center',marginTop:'33px'}}>
+    <Calendar onChange={(data)=>{setseldate(data)}} value={seldate}  />
+    </div>
+    </>
+  )
 }
 
-export default App;
+export default App
